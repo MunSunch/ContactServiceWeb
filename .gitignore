@@ -1,3 +1,8 @@
+### SSL
+*.crt
+*.key
+private_key.key
+
 target/
 .mvn/
 !.mvn/wrapper/maven-wrapper.jar
