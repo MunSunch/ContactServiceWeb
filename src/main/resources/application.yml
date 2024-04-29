@@ -8,8 +8,3 @@ spring:
 server:
   servlet:
     context-path: /contacts
-  port: 8080
-  ssl:
-    certificate: "classpath:certificate.crt"
-    certificate-private-key: "classpath:private_key.key"
-    trust-certificate: "classpath:certificate_ca.crt"
