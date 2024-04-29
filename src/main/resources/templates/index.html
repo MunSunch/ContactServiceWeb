@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{css/style.css}">
+    <title>Contacts</title>
+</head>
+<body>
+    <main>
+        <div class="contacts_container">
+            <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Имя</th>
+                    <th>Фамилия</th>
+                    <th>Email</th>
+                    <th>Номер</th>
+                    <th>Действия</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="contact: ${contacts}">
+                    <td th:text="${contact.getId()}"></td>
+                    <td th:text="${contact.getFirstname()}"></td>
+                    <td th:text="${contact.getLastname()}"></td>
+                    <td th:text="${contact.getEmail()}"></td>
+                    <td th:text="${contact.getPhone()}"></td>
+                    <td>
+                        <a class="button" th:href="@{/edit/{id}(id=${contact.getId()})}">Изменить</a>
+                        <a class="button" th:href="@{/delete/{id}(id=${contact.getId()})}">Удалить</a>
+                    </td>
+                </tr>
+            </tbody>
+            </table>
+            <a class="button" style="margin-top: 1%;" th:href="@{/save}">Добавить</a>
+        </div>
+    </main>
+</body>
+</html>

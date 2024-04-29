@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: Contacts
+  sql:
+    init:
+      mode: always
+
+server:
+  servlet:
+    context-path: /contacts

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{css/style.css}">
+    <title>Contacts save</title>
+</head>
+<body>
+    <main>
+        <div class="form_container">
+            <form id="save_form" th:action="${contact.getId()==null? '/contacts/save': '/contacts/edit'}" method="post">
+                <fieldset>
+                    <legend style="text-align: center;">Сохранение/Изменение</legend>
+                    <input type="number" name="id" placeholder="id" th:value="${contact.getId()}" hidden="hidden">
+                    <div>
+                        <label for="firstname">Имя:</label>      
+                        <input type="text" name="firstname" placeholder="Иван" th:value="${contact.getFirstname()}" required>
+                    </div>
+                    <div>
+                        <label for="lastname">Фамилия:</label>      
+                        <input type="text" name="lastname" placeholder="Иванов" th:value="${contact.getLastname()}" required>
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>      
+                        <input type="email" name="email" placeholder="msunchalyaev@gmail.com" th:value="${contact.getEmail()}">
+                    </div>
+                    <div>
+                        <label for="phone">Номер:</label>      
+                        <input type="tel" name="phone" placeholder="79873022329" th:value="${contact.getPhone()}" required>
+                    </div>
+                    <button>Отправить</button>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
