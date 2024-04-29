@@ -26,7 +26,7 @@ H2, PostgreSQL, HTML, CSS, Docker, Docker Compose.
 
 Для слоя с данными написаны [юнит-тесты](src/test/java/com/munsun/contact_service/dao/ContactDaoImplUnitTests.java).
 
-Для развертывания сервиса на удаленном сервере добавлена конфигурация в [application.yml](src/main/resources/application.yml)
+Для развертывания сервиса на удаленном сервере добавлена конфигурация в [application.yml](https://github.com/MunSunch/ContactServiceWeb/blob/main/src/main/resources/application.yml)
 в ветке main(сейчас ты находишься в ветке local).
 
 ## Запуск
