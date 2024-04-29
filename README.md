@@ -1,5 +1,5 @@
 # Контакты
-Сервис с встроенной БД развернут на Raspberry pi 4 
+(В разработке)Сервис с встроенной БД развернут на Raspberry pi 4 
 и доступен по адресу https://service-advice.ru/contacts.
 
 Применяемые технологии: Java17, Maven, Spring Boot Web, Thymeleaf, Spring Data JDBC, Spring Boot Test, 
